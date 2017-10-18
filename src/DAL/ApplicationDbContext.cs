@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using CS586MVC.Models;
 using DAL.Models.Interfaces;
 
 namespace DAL
@@ -27,6 +28,13 @@ namespace DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        public DbSet<Lease> Leases { get; set; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<PropertyUnit> PropertyUnits { get; set; }
+        
+
 
 
 
@@ -66,6 +74,9 @@ namespace DAL
             builder.Entity<Order>().ToTable($"App{nameof(this.Orders)}");
 
             builder.Entity<OrderDetail>().ToTable($"App{nameof(this.OrderDetails)}");
+            builder.Entity<Property>().Property(p => )
+            builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}");
+            builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}")
         }
 
 
