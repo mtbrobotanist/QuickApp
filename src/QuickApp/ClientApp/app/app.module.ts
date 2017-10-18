@@ -66,6 +66,8 @@ import { UserPreferencesComponent } from "./components/controls/user-preferences
 import { UsersManagementComponent } from "./components/controls/users-management.component";
 import { RolesManagementComponent } from "./components/controls/roles-management.component";
 import { RoleEditorComponent } from "./components/controls/role-editor.component";
+import { PropertiesComponent } from './components/properties/properties.component';
+import { TenantsComponent } from './components/tenants/tenants.component';
 
 
 
@@ -114,7 +116,9 @@ import { RoleEditorComponent } from "./components/controls/role-editor.component
         BootstrapToggleDirective,
         BootstrapSelectDirective,
         BootstrapDatepickerDirective,
-        GroupByPipe
+        GroupByPipe,
+        PropertiesComponent,
+        TenantsComponent
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },

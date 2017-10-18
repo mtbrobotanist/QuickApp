@@ -35,8 +35,11 @@
 
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Compile Remove="ClientApp\app\app\**" />
     <Content Remove="ClientApp\**" />
     <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="ClientApp\app\app\**" />
+    <None Remove="ClientApp\app\app\**" />
   </ItemGroup>
 
   <Target Name="DevelopementRunWebpack" AfterTargets="Build" Condition="!Exists('wwwroot\dist\vendor.js')">
