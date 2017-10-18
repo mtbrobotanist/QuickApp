@@ -29,10 +29,10 @@ namespace DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-        public DbSet<Lease> Leases { get; set; }
-        public DbSet<Property> Properties { get; set; }
-        public DbSet<Tenant> Tenants { get; set; }
-        public DbSet<PropertyUnit> PropertyUnits { get; set; }
+        //public DbSet<Lease> Leases { get; set; }
+        //public DbSet<Property> Properties { get; set; }
+        //public DbSet<Tenant> Tenants { get; set; }
+        //public DbSet<PropertyUnit> PropertyUnits { get; set; }
         
 
 
@@ -73,10 +73,14 @@ namespace DAL
             builder.Entity<Order>().Property(o => o.Comments).HasMaxLength(500);
             builder.Entity<Order>().ToTable($"App{nameof(this.Orders)}");
 
-            builder.Entity<OrderDetail>().ToTable($"App{nameof(this.OrderDetails)}");
-            builder.Entity<Property>().Property(p => )
-            builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}");
-            builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}")
+            //builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}");
+            //builder.Entity<Property>().Property(p => p.Address).IsRequired().HasMaxLength(256);
+            //builder.Entity<Property>().Property(p => p.Amenities).HasMaxLength(1);
+            //builder.Entity<Property>().HasMany(p => p.PropertyUnits).WithOne();
+
+            //builder.Entity<Property>().HasMany(p => p.PropertyUnits).WithOne();
+            //builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}");
+            //builder.Entity<Property>().ToTable($"App{nameof(this.Properties)}");
         }
 
 
